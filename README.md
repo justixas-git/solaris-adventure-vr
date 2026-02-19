@@ -30,6 +30,14 @@ I was responsible for the full development of the project, including:
 - XR interaction systems
 - Custom gameplay scripts
 
+## Screenshots
+
+![Main Hub](images/main-hub.png)
+![Solar System Missions Level 3](images/ssm-lvl3.png)
+![Orbital Mechanics Missions Level 3](images/omm-lvl3.png)
+
+More screenshots available in **Images** folder
+
 ## Media
 Gameplay video: https://youtube.com/shorts/7OgnFOWju9Q?feature=share
 
