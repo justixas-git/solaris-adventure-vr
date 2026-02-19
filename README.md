@@ -1,9 +1,9 @@
 # Solaris Adventure — Educational VR Game
 
-**Type:** Bachelor's Thesis Project
-**Engine:** Unity
-**Platform:** VR
-**Focus:** VR interaction, gameplay systems, educational design
+**Type:** Bachelor's Thesis Project  
+**Engine:** Unity  
+**Platform:** VR  
+**Focus:** VR interaction, gameplay systems, educational design  
 
 ## Overview
 Solaris Adventure is an educational VR game developed as part of my Bachelor’s thesis.  
