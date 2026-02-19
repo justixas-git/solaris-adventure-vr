@@ -31,7 +31,7 @@ I was responsible for the full development of the project, including:
 - Custom gameplay scripts
 
 ## Media
-Gameplay video:
+Gameplay video: https://youtube.com/shorts/7OgnFOWju9Q?feature=share
 
 ## Notes
 The full Unity project and playable builds are not publicly available.  
