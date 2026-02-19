@@ -34,6 +34,5 @@ I was responsible for the full development of the project, including:
 Gameplay video:
 
 ## Notes
-The full Unoty project and playable builds are not publicly available.
-
+The full Unity project and playable builds are not publicly available.
 Additional details can be shared on request.
