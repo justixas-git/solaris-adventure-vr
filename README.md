@@ -1,7 +1,7 @@
 # Solaris Adventure  
 **Educational VR Game — Gameplay Systems & Interaction Design (Unity / C#)**
 
-Solaris Adventure is an educational VR game developed as part of my Bachelor’s thesis.  
+Solaris Adventure is an educational VR game developed as part of my Bachelor’s thesis, with a strong focus on **gameplay systems, interaction consistency, and VR usability**.  
 It teaches middle-school astronomy concepts (grades 5–8) through **interactive VR missions** and **free exploration**.
 
 > **Note:** The full Unity project and playable builds are not publicly available. Additional details can be shared on request.
@@ -94,13 +94,15 @@ Solo development, including:
 - UI flow and player feedback
 - Localization system (post-thesis)
 
+This project was developed end-to-end, including post-delivery system refactoring and feature expansion.
+
 ---
 
 ## Technology
 - Unity (VR)
 - C#
+- Custom gameplay & interaction systems
 - XR interaction systems
-- Custom gameplay scripts
 
 ---
 
