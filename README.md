@@ -41,13 +41,48 @@ The game follows a **hub-and-missions structure**:
 
 ---
 
-## Post-Thesis Improvement — Localization System
-After the thesis defense, I implemented a **full localization system**:
-- Complete Lithuanian localization, with English retained as an option
-- **Seamless runtime language switching** via the in-game settings menu
-- Applied consistently across menus, mission instructions, feedback UI, and informational panels
+## Implementation Notes (for technical review)
 
-This required refactoring UI text flow and ensuring safe updates across active scenes.
+This section highlights representative systems and implementation choices.  
+(Full Unity project is private; code details can be shared on request.)
+
+### Representative Systems & Scripts
+
+**Mission flow orchestration**
+- `MissionSceneController` — mission state, progression flow, completion conditions, and UI state coordination.
+- Mission-specific controllers (e.g., `SolarSystemLevel*Controller`, `OrbitalMechanicsLevel*Controller`, `MoonPhasesLevel*Controller`, `ConstellationLevel*Controller`) — rules and objectives per mission, kept separate to avoid “one giant controller” logic.
+
+**Reusable VR interaction layer**
+- `GenericInteractable` — shared interaction baseline used across mission contexts.
+- `GenericDragInteractable` — drag-driven interaction building block used for multiple mission mechanics.
+- (Where needed) specialized interactables extend the same interaction language rather than introducing new, inconsistent rules.
+
+**UI & settings as gameplay systems (VR-aware)**
+- `PersistentUI` — keeps core UI available across contexts without duplicating per-scene UI logic.
+- `UIFollowController` — VR-friendly UI placement behaviour (readability and comfort considerations).
+- `GlobalMenuManager` + `SettingsManager` — centralized navigation/menu flow and settings application.
+
+**Data-driven learning content**
+- `FactData` + `FactObject` — structured content representation, enabling iteration on learning material without rewriting core mission logic.
+- (Constellations) puzzle/trivia data is represented in dedicated data assets rather than being hard-coded into mission scripts.
+
+**Audio & cohesion**
+- `AudioManager` — centralized audio control; supports consistent feedback and atmosphere across scenes.
+
+**XR initialization glue**
+- `XRTrackingOriginBootstrap` — runtime setup/consistency handling for XR tracking origin behaviour.
+
+---
+
+### Localization System (post-thesis, cross-cutting change)
+
+After the thesis defense, I implemented full localization using Unity’s Localization workflow:
+
+- Two locales: **English (en-US)** and **Lithuanian (lt-LT)**
+- Multiple **String Tables** split by context (main scene, missions, trivia, free-roam/info zones, etc.)
+- **Runtime language switching** via settings menu (updates UI text without restarting)
+
+This feature required touching UI/text surfaces across missions and ensuring updates are safe and consistent in active scenes (a cross-cutting refactor rather than isolated changes).
 
 ---
 
